@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>div position</title>
+    <style>
+        .first{
+            width : 200px;
+            height : 200px;
+            background-color: royalblue;
+            position: static;
+        }
+        .second{
+            width : 200px;
+            height : 200px;
+            left: 100px;
+            top : 50px;
+            background-color: orange;
+            position: fixed;
+            z-index: 999;
+        }
+        .third{
+            width : 200px;
+            height : 200px;
+            left : 50px;
+            top : 100px;
+            position: relative;
+            background-color: yellow;
+            z-index: 1000;
+        }
+        .fourth{
+            width : 200px;
+            height : 200px;
+            background-color: turquoise;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class = "first">
+        첫번째 영역(가로200 X 세로 200)
+    </div>
+    <div class = "second">
+        두번째 영역(가로200 X 세로 200)
+    </div>
+    <div class = "third">
+        세번째 영역(가로200 X 세로 200)
+    </div>
+    <div calss = "fourth">
+        네번째 영역(가로200 X 세로 200)
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

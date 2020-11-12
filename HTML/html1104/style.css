@@ -1,0 +1,16 @@
+h1{
+    font-size : 30px;
+    color : red;
+    border : solid 4px pink;
+    /* dotted, dashed, solid, double, hidden
+       groove, ridge, inset, outset, none */
+}
+p{
+    font-size : 20px;
+    font-weight : bold;
+    color : orange;
+}
+body {
+    background-color: aquamarine;
+    color : tomato;
+}
