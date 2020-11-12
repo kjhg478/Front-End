@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>재귀호출</title>
+</head>
+
+<body>
+    <h2> 재귀호출 : 함수안에서 자신을 다시 호출하는 것 </h2>
+    <!-- 4 x 3 x 2 x 1 = 4! -->
+    <!-- factorial -->
+
+    <fieldset>
+        <legend> factorial 함수 </legend>
+        <input type="text" id="fact">
+        <input type="button" value="factorial" onclick="factmethod()">
+        <h2>입력한 값 : <span id="result1"></span></h2>
+        <h2>결과 값 : <span id="result2"></span></h2>
+        <img id="img2" src="">
+    </fieldset>
+</body>
+
+<script>
+    var result = 1;
+    // Q. NUM값을 입력받아 factorial 함수를 완성해보시오
+    // 재귀함수는 == factorial을 항상 생각해야함 !
+    function factorial(num) {
+        if (num == 0) {
+            return result;
+        } else {
+            result = result * num;
+            num--;
+        }
+        return factorial(num);
+    }
+    function factmethod() {
+        /* 타입 확인
+        var num1 = document.getElementById("fact");
+        console.log(num1);
+        console.log(typeof num1);
+
+        var num = parseInt(num1.value);
+        console.log(num);
+        console.log(typeof num);
+        */
+        num = parseInt(document.getElementById("fact").value);
+        result = 1;
+        factorial(num);
+        
+
+        document.getElementById("result1").innerHTML = num;
+        document.getElementById("result2").innerHTML = result;
+
+        img1();
+    }
+
+    function img1() {
+        document.getElementById("img2").src="tiger.jpg";
+    }
+</script>
+
+</html>

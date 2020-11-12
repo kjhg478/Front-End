@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <h2>BREAK</h2>
+    <p id="break1"></p>
+    <br/>
+
+    <h2>CONTINUE</h2>
+    <p id="continue1"></p>
+</body>
+
+<script>
+    var text1 = "";
+    var text2 = "";
+
+    for(var i=1; i<=10; i++) {
+        if(i==6) {
+            break;
+        }
+        text1 += "The number is " + i + "<br/>";
+    }
+
+    document.getElementById("break1").innerHTML = text1;
+    
+    for(var i=1; i<=10; i++) {
+        if(i%3==0) {
+            continue;
+        }
+        text2 += "The number is " + i + "<br/>";
+    }
+    document.getElementById("continue1").innerHTML = text2;
+  
+</script>
+</html>

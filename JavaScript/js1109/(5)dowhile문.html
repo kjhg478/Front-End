@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>do-while문</title>
+</head>
+<body>
+    <h2>do-while문</h2>
+    <p id = "dowhile1"></p>
+
+    <h2>while문</h2>
+    <p id = "while2"></p>
+</body>
+
+<script>
+    /*
+        do-while문 : 무조건 한번이 실행이 된다.
+        do-while문 초기식
+
+        초기식;
+        do {
+            실행문;
+            증감식;
+        } while(조건식);
+
+    */
+    //초기식
+    var i = 1;
+    
+    var text1 = "";
+    var text2 = "";
+
+    do{
+        text1 += "The number is " + i + "<br/>"; // 실행문
+        i++; // 증감식
+    }while(i<=10); // 조건식
+
+    document.getElementById("dowhile1").innerHTML = text1;
+    
+    var j = 1;
+    while(j<1) {
+        text2 += "The number is " + j + "<br/>"; // 실행문
+        j++;
+    }
+    document.getElementById("while2").innerHTML = text2;
+
+</script>
+</html>

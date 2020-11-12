@@ -1,0 +1,23 @@
+
+input {
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	line-height: 30px;
+}
+input {
+	background-color: #fff;
+	border-color: #59b1eb;
+	color: #59b1eb;
+}
+fieldset {
+    margin: auto;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    font-size: 25px;
+    background-color: skyblue;
+    color : darkblue;
+    border: 3px solid;
+}
+

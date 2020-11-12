@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>이벤트(Event)</title>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 250px;
+            /* 글자를 div 공간 정중앙에 두고 싶다면 height와 같은 px로 맞춰줘야함 */
+            margin: auto;
+        }
+    </style>
+</head>
+<body onload = "alert('로딩 완료')">
+    <div id="a1" onmouseover="mouseEvent('over')" 
+                 onmouseout="mouseEvent('out')"></div> 
+    <!-- 속성과 속성값으로 이루어짐 -->
+    <!-- event같은 경우엔 각 조건에 맞는 if문으로 써줌 (else if X) -->
+
+</body>
+
+<script>
+    function mouseEvent(evt) {
+        if(evt == "over") {
+            // over일 때 이벤트 발생
+            // "mouse over" 출력
+            document.getElementById("a1").innerHTML = "mouser over";
+            // document : 문서내에
+            // getElementById(" ") : id 속성값이 " "인 녀석
+            // .innerHTML : HTML 형식으로 출력해라
+        }
+        if(evt == "out") {
+            // out일 때 이벤트 발생
+            // "mouse out" 출력
+            document.getElementById("a1").innerHTML = "mouser out";
+        }
+    }
+</script>
+</html>

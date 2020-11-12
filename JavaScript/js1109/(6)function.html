@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>function(함수)</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>계산기 만들기</legend>
+        첫번째 숫자 : <input type="text" id="a1"><br />
+        두번째 숫자 : <input type="text" id="b1"><br />
+
+        <input type="button" value="sum" onclick="sum()">
+        <input type="button" value="minus" onclick="minus()">
+        <input type="button" value="multi" onclick="multi()">
+        <input type="button" value="divide" onclick="divide()">
+
+        <h1>결과 : <span id ="ans"></span></h1>
+    </fieldset>
+</body>
+
+<script>
+    // 자바 : method()
+    // 자바스크립트 : function()
+
+    // 전역변수 a, b 선언
+    var a;
+    var b;
+
+    a = parseInt(document.getElementById("a1").value);
+    console.log(typeof a);
+
+    function insert() {
+        a = parseInt(document.getElementById("a1").value);
+        b = parseInt(document.getElementById("b1").value);
+    }
+
+    function sum() {
+        insert();
+        document.getElementById("ans").innerHTML= a+b;
+
+    }
+    function minus() {
+        insert();
+        var result = a-b;
+        document.getElementById("ans").innerHTML= result;
+    }
+    function multi() {
+        insert();
+        var result = a*b;
+        document.getElementById("ans").innerHTML= result;
+    }
+    function divide() {
+        insert();
+        var result = a/b;
+ 
+        document.getElementById("ans").innerHTML = result;
+    
+        if(b==0) {
+            document.getElementById("ans").innerHTML = "두번째 숫자를 다시 입력하시오.";
+        }
+
+        
+
+    }
+
+</script>
+
+</html>

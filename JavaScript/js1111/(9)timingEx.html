@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>5초 후 페이지 이동(예제문제)</title>
+</head>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+<body>
+    <h2><span id = "count">5</span>초 후</h2>
+    
+</body>
+
+<script>
+    var cnt = 5;
+    var msg = document.getElementById("count");
+
+    setInterval(function() {
+        cnt--;
+        msg.innerHTML = cnt;
+    },1000);
+
+    
+    setTimeout(function() {
+        alert("페이지가 이동됩니다.");
+        location.href = "http://www.naver.com";
+    },5000)
+</script>
+</html>

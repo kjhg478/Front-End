@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window</title>
+</head>
+<body>
+    <button>창열기</button>
+    <button>창닫기</button>
+    <button>창크기 변경</button>
+
+</body>
+<script>
+    var btn = document.getElementsByTagName("button");
+    // btn[0] : 창열기
+    // btn[1] : 창닫기
+    // btn[2] : 창크기
+
+    var mywindow;
+
+    btn[0].addEventListener("click",winOpen);
+    btn[1].addEventListener("click",winClose);
+    btn[2].addEventListener("click",winResize);
+
+    function winOpen() {
+        mywindow = window.open("(6)screen.html", "myWindow", "width=250, height = 250, top=200, left = 200");
+        // 1번째 값 : 주소, 2번째 값 : 제목
+    }
+    function winClose() {
+        mywindow.close();
+        //필드변수로 mywindow를 선언하고 mywindow에 값을 넣어줬기 때문에 여기서도 사용가능!
+        //내가 winOpen()에서 만들어 준 창 mywidow
+    }
+
+    function winResize() {
+        //mywindow.resizeTo(500,500);
+        // 크기를 고정
+        mywindow.resizeBy(100,100);
+        // 크기를 증가
+
+        mywindow.focus();
+    }
+</script>
+</html>

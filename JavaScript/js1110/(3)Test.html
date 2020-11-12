@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css" type = "text/css">
+</head>
+<body>
+    <fieldset>
+        <legend>JH Bank</legend>
+        금액 : <input type = "text" id="a1" placeholder="잔액을 입력해주세요"><br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;
+        <input type = "button" value = "입금" onclick="Account.deposit()">
+        <input type = "button" value = "출금" onclick="Account.withdraw()">
+        <input type = "button" value = "잔액조회" onclick="Account.toString()">
+
+        <h3>잔액조회 : <span id = "i1"></span></h3>
+    </fieldset>
+</body>
+
+<script>
+    //Object 생성
+    var Account = {};
+
+    // 필드
+    Account.balance = 0; // balance라는 키에 0이라는 값이 들어가 있다.
+
+    // 메소드
+    // function deposit(amount)
+    Account.deposit = function() { // 예금
+        //var amount = document.getElementById("a1").value(); 이렇게만 받아오면 String
+        var amount = parseInt(document.getElementById("a1").value);
+        this.balance += amount;
+    }
+    //출금
+    Account.withdraw = function() {
+        var amount = parseInt(document.getElementById("a1").value);
+        if(this.balance >= amount) {
+            this.balance -= amount;
+        } else {
+            alert("잔액이 부족합니다");
+        }
+        
+    }
+    Account.toString = function() {
+        document.getElementById("i1").innerHTML = this.balance;
+    }
+
+
+</script>
+</html>

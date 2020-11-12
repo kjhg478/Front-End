@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Timing</title>
+    <style>
+        span{
+            color: red;    
+        }
+    </style>
+</head>
+<body>
+    <h1 id="msg"><span id="a1"></span> 초 후 페이지가 이동됩니다.</h1>
+</body>
+
+<script>
+    var myTime;
+    var x = 0;
+
+   
+    myTime = setInterval(function() {
+        x++;
+        a1.innerHTML = x;
+    },1000);
+
+    setTimeout(function() {
+        alert("페이지가 이동됩니다.");
+        document.getElementById("msg").innerHTML = myTime;
+        location.href = "http://www.naver.com";
+    },5000)
+
+</script>
+</html>

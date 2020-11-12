@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Mouse Position</title>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="eventZone"></div>
+    <h2>mouse position: <span id="pos"></span></h2>
+    <h2>mouse position: <span id="pos1"></span></h2>
+</body>
+
+<script>
+    var mousezone = document.getElementById("eventZone");
+    mousezone.addEventListener("click", click1);
+    mousezone.addEventListener("dblclick", dblclick1);
+    mousezone.addEventListener("mouseenter", mEnter);
+    mousezone.addEventListener("mouseout", mOut);
+    //mouseover => mouseenter
+    //mouseout => mouseout
+
+    mousezone.addEventListener("contextmenu", contextmenu);
+
+    function contextmenu() {
+        alert('우클릭 금지');
+    }
+
+    function click1() {
+        mousezone.innerHTML = "click!!";
+        mousezone.style.backgroundColor = "orange";
+    }
+    function dblclick1() {
+        mousezone.innerHTML = "dblclick!!";
+        mousezone.style.backgroundColor = "blue";
+    }
+    function mEnter() {
+        mousezone.innerHTML = "mEnter!!";
+        mousezone.style.backgroundColor = "red";
+    }
+    function mOut() {
+        mousezone.innerHTML = "mOut!!";
+        mousezone.style.backgroundColor = "green";
+    }
+
+    document.addEventListener("mousemove", mMove);
+
+    //move(임의로 정한 파라미터 이름)
+    // 현재 마우스 포인터의 위치를 나타내줌
+    // var move = window.event;
+    function mMove(move) {
+        document.getElementById("pos").innerHTML = 
+        "브라우저(client) X : " +move.clientX + " / Y : "+move.clientY;
+
+        document.getElementById("pos1").innerHTML =
+        "모니터(screen) X : "+move.screenX + " / Y : "+move.screenY;
+
+    }
+</script>
+</html>

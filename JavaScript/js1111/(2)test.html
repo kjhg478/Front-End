@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Date</legend>
+        <input type = "text" id = "a1" onkeydown="keyud('down')" onkeyup="keyud('up')"> 
+        <!-- () 함수로 만들어줘서 이 동작을 실행하게끔  -->
+        <hr/>
+        <!-- <button onclick="getDay()">현재시간</button> -->
+        <!-- <input type = "button" value="현재시간" onclick="getDay()"> -->
+        <h3 id="typing">표시 될 부분 : </h3>
+    </fieldset>
+        <!-- fieldset 안에 onclick을 사용하여 
+         오늘 날짜와 시간을 출력하는 함수를 만들어보자 -->
+    <fieldset>
+        <legend>자동차 제조사</legend>
+        <select id="mySel" onchange="sel()">
+            <option> 아우디 </option>
+            <option> 테슬라 </option>
+            <option> 벤츠 </option>
+            <option> BMW </option>
+        </select>
+        <h3 id="company">표시 될 부분</h3>
+    </fieldset>
+</body>
+<script>
+    /*function getDay() {
+        document.getElementById("now").innerHTML = Date(); 
+    }*/
+
+    function keyud(k) {
+        if(k=="down") {
+            document.getElementById("typing").innerHTML = "Key Down !";
+            var msg = document.getElementById("a1").value;
+            document.getElementById("typing").innerHTML =  msg;
+
+        }
+        if(k=="up") {
+            document.getElementById("typing").innerHTML = "Key Up !";
+        }
+    }
+    function sel() {
+        var car = document.getElementById("mySel").value;
+        document.getElementById("company").innerHTML = car;
+    }
+
+    /*
+        1. onload : 브라우저가 모든 페이지를 로딩한 후 실행
+        2. onmouseover : 마우스가 영역 위로 올라왔을 경우
+        3. onmouseout : 마우스가 영역 밖으로 벗어났을 경우
+        4. onclick : 마우스를 클릭 시 실행
+        5. onkeydown : 키보드의 키를 눌렀을 경우 실행
+        6. onkeyup : (눌린)키가 떨어졌을 경우 실행
+        7. onchange : 문서에 변경이 있을 경우 실행
+    */
+</script>
+</html>
