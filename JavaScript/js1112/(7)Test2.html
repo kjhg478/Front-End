@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <h2>당신이 입력한 값 : <span></span></h2>
+    <input type="text" id="input1" onkeyup="keyEvt()">
+    <span>(0자 입력)</span>
+</body>
+
+<script>
+    var txt = document.getElementById("input1");
+    var msg = document.getElementsByTagName("span");
+    // msg[0]에는 첫번째 span태그
+    // msg[1]에는 두번째 span태그
+
+    function keyEvt() {
+        var val = txt.value;
+        // console.log(val.length);
+
+        if(val.length>=0 && val.length<5) {
+            msg[1].style.color = "black";
+        } else if(val.length >= 5 && val.length<10) {
+            msg[1].style.color = "orange";
+        } else {
+            msg[1].style.color = "red";
+
+            val = val.slice(0,10);
+            // input창에 글자를 10개만 출력하도록 설정
+            txt.value = val;
+            alert('더 이상 입력할 수 없습니다.');
+        }
+
+        msg[0].innerHTML = val;
+        msg[1].innerHTML = "(" + val.length + ")";
+    }
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>당신이 입력한 값 : <span id = "v1"></span></h2><br/>
+    <input type = "text" id = "a1" onkeydown="keyud('down')" onkeyup="keyud('up')"><span id="c1"></span>자 입력
+
+
+    
+</body>
+<script>
+    var msg1 = ""; // 문자타입
+    var msg2 = 0; // 숫자타입
+    var msg3 = document.getElementById("c1"); // 객체타입
+    function keyud(up) {
+        msg1 = document.getElementById("a1").value;
+        if(up == "up") {
+        msg2 = msg.substring(0,10);
+        document.getElementById("c1").innerHTML = msg2.length;
+
+        if(msg1.length < 10) {
+            document.getElementById("v1").innerHTML = msg;
+            msg3.style.color = "organge";
+        }else if(msg.length < 5) {
+            msg3.style.color = "blue";
+        }else {
+            msg2 = msg.substring(0,10);
+            document.getElementById("a1").value = msg2;
+            alert("10자 이상 입력할 수 없습니다.");
+            msg3.style.color = "red";
+        }
+
+        }
+        
+    }
+
+    
+    
+    
+
+
+</script>
+</html>
