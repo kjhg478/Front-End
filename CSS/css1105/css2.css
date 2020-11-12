@@ -1,0 +1,16 @@
+ul, ol {
+    color : olive;
+}
+
+ul>li{
+    color : blue;
+}
+
+.ol1 li{
+    color : red;
+}
+
+#ol2 li {
+    color : hotpink;
+}
+/*직접 태그에 걸어주는게 > 아이디 > 클래스 > 태그 순으로 우선순위가 정해짐 */

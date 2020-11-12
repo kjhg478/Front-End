@@ -1,0 +1,16 @@
+
+table,tr,td, th{
+        border : 1px solid black;
+        border-collapse: collapse;
+        /* collapse : 테이블 선을 합쳐주는 역할 */
+}
+
+input{
+    background-color: lightgrey;
+}
+input:focus{
+    background-color: powderblue;
+}
+input:hover{
+    background-color: seagreen;
+}

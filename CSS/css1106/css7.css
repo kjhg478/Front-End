@@ -1,0 +1,28 @@
+div{
+    border: 3px solid red;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+}
+.img1{
+    float: right;
+}
+
+#parent{
+    border: 3px solid blue;
+}
+
+.child{
+    border: 1px solid steelblue;
+    height: 100px;
+    background-color: skyblue;
+    float: right;
+}
+
+.child1{
+    border: 1px solid steelblue;
+    height: 100px;
+    background-color: skyblue;
+    clear: right;
+    /* float와 clear은 똑같이 방향을 맞춰줘야 하며  */
+}
